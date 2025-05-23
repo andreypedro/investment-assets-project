@@ -23,12 +23,12 @@ export default function Home() {
             Stand out to recruiters and employers with a professional LinkedIn
             makeover. Fast, easy, and tailored for your career goals.
           </p>
-          <a
-            href="#get-started"
+            <a
+            href="#linkedin-profile-input"
             className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-8 py-4 rounded-xl shadow transition mb-8"
-          >
+            >
             Get Started Now
-          </a>
+            </a>
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-blue-700 font-medium text-base">
             <span>✔ Simple 3-step process</span>
             <span>✔ Personalized for you</span>
@@ -102,27 +102,26 @@ export default function Home() {
       </section>
      
       {/* LinkedIn Profile Input Section */}
-      <section className="w-full text-center text-blue-900 text-base py-8 bg-white border-t border-blue-100 font-semibold tracking-wide">
-        <h3 className="text-2xl font-bold text-blue-800 mb-4">
+      <section id="linkedin-profile-input" className="bg-white py-16 px-4 border-t border-blue-100">
+        <h3 className="text-3xl font-bold text-blue-800 mb-10 text-center">
           Ready to Transform Your LinkedIn?
         </h3>
-        <p className="text-blue-900 mb-6 text-lg">
-          Enter your LinkedIn profile URL below and take the first step toward more opportunities!
+        <p className="text-blue-900 mb-8 text-lg text-center">
+          Connect with LinkedIn to get started instantly!
         </p>
-        <form className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-4 justify-center">
-          <input
-        type="url"
-        placeholder="Your LinkedIn profile URL"
-        className="flex-1 px-4 py-3 border border-blue-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
-        required
-          />
-          <button
-        type="submit"
-        className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow transition whitespace-nowrap"
+        <div className="flex justify-center">
+          <a
+            href="/api/auth/linkedin" // Replace with your LinkedIn SSO endpoint
+            className="flex items-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg shadow transition text-lg"
+            style={{ minWidth: 280 }}
           >
-        Let's GO
-          </button>
-        </form>
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="6" fill="#fff"/>
+              <path d="M12.5 13.5H9.5V22.5H12.5V13.5ZM11 12.25C11.8284 12.25 12.5 11.5784 12.5 10.75C12.5 9.92157 11.8284 9.25 11 9.25C10.1716 9.25 9.5 9.92157 9.5 10.75C9.5 11.5784 10.1716 12.25 11 12.25ZM14.5 13.5V22.5H17.5V17.5C17.5 16.3954 18.3954 15.5 19.5 15.5C20.6046 15.5 21.5 16.3954 21.5 17.5V22.5H24.5V17C24.5 14.5147 22.4853 12.5 20 12.5C18.6193 12.5 17.5 13.6193 17.5 15V13.5H14.5Z" fill="#2563EB"/>
+            </svg>
+            Connect with LinkedIn
+          </a>
+        </div>
       </section>
       {/* Footer */}
       <footer className="w-full py-12 bg-blue-50 text-center">
